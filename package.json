@@ -1,0 +1,27 @@
+{
+  "name": "@hibiki-automatic/mycelium-theme",
+  "version": "0.1.0",
+  "description": "Single source of truth for mycelium visual tokens, CSS strings, and class-name constants.",
+  "type": "module",
+  "main": "dist/mycelium-theme.cjs.js",
+  "module": "dist/mycelium-theme.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "dist/index.d.ts",
+      "import": "dist/mycelium-theme.es.js",
+      "require": "dist/mycelium-theme.cjs.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --declarationDir dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.3"
+  }
+}
