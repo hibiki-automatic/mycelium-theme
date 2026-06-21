@@ -14,11 +14,11 @@ describe('mycelium-theme tokens', () => {
 })
 
 describe('mycelium-theme CSS', () => {
-  it('myceliumCss contains preview class', () => {
-    expect(myceliumCss).toContain('.mycelium-preview')
+  it('myceliumCss contains markdown-body class', () => {
+    expect(myceliumCss).toContain('.markdown-body')
   })
-  it('myceliumDarkCss scoped to dark', () => {
-    expect(myceliumDarkCss).toContain('.mycelium-preview.dark')
+  it('myceliumDarkCss contains dark overrides for markdown-body', () => {
+    expect(myceliumDarkCss).toContain('.markdown-body')
   })
   it('CSS includes heading styles', () => {
     expect(myceliumCss).toContain('h1')
